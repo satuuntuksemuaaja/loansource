@@ -13,9 +13,7 @@ class HomeController extends Controller
     public function index(): View
     {
         $states = LoanSource::getStates()
-            ->get()
-            ->chunk(5)
-            ->all();
+            ->get();
 
         return view('home', compact('states'));
     }

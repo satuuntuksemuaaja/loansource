@@ -7,9 +7,9 @@
             <div id="vmap" style="width: 600px; height: 400px;"></div>
         </div>
         <div class="states_list">
-            @foreach($states as $chunks)
+            @foreach($states->chunk(5) as $chunk)
             <ul class="states_list">
-                @foreach($chunks as $state)
+                @foreach($chunk as $state)
                     <li><a href="{{ route('decatur', $state->code) }}">{{ $state->name }}</a></li>
                 @endforeach
             </ul>
