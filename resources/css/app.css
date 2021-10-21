@@ -1,0 +1,32 @@
+.states_list {
+    width: 100%;
+    margin-top: 30px!important;
+    overflow: hidden;
+}
+.states_list ul {
+    float: left;
+    width: 20%;
+}
+.states_list li {
+    height: 37px;
+    margin-bottom: 0;
+    list-style: none;
+}
+.states_list a {
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -0.08em;
+    padding: 10px;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: -moz-middle-with-baseline;
+    display: table;
+}
+.bg-purple {
+    background-color: #7961dd
+}
+
+#map {
+    width: 100%;
+    height: 350px;
+    background-color: grey;
+}
