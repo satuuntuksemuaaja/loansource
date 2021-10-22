@@ -10,7 +10,7 @@
             @foreach($states->chunk(5) as $chunk)
             <ul class="states_list">
                 @foreach($chunk as $state)
-                    <li><a href="{{ route('decatur', $state->code) }}">{{ $state->name }}</a></li>
+                    <li><a href="{{ route('cities', $state->code) }}">{{ $state->name }}</a></li>
                 @endforeach
             </ul>
             @endforeach
@@ -24,10 +24,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/jquery.vmap.min.js" integrity="sha512-Zk7h8Wpn6b9LpplWXq1qXpnzJl8gHPfZFf8+aR4aO/4bcOD5+/Si4iNu9qE38/t/j1qFKJ08KWX34d2xmG0jrA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqvmap/1.5.1/maps/jquery.vmap.usa.js" integrity="sha512-Cmn5O078aY6sQmucOhrnSdViKCPMmbr719psNalYjWmmvzgcA/37DP9MHznD4BMfFm7ssSvVF2rfZbFenkonUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        Loan.initHomePage('#vmap', {
+        Loan.initVectorMap('#vmap', {
             onRegionClick: function(event, code){
                 event.preventDefault();
-                window.location.href = '{{ route('decatur', '?') }}'.replace('?', code);
+                window.location.href = '{{ route('cities', '?') }}'.replace('?', code);
             }
         });
     </script>

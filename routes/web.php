@@ -17,4 +17,5 @@ use App\Http\Controllers\LoanSourceController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('loan-sources/{state}/decatur', [LoanSourceController::class, 'decatur'])->name('decatur');
+Route::get('loan-sources/{state}', [LoanSourceController::class, 'cities'])->name('cities');
+Route::get('loan-sources/{state}/{city}', [LoanSourceController::class, 'companies'])->name('companies');
